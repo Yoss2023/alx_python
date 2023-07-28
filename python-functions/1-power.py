@@ -19,5 +19,9 @@ def pow(a, b):
         a *= a
         b //= 2
 
+    # Check if b was negative, then convert result to 1/result
+    if b < 0:
+        result = 1 / result
+
     return result
 
