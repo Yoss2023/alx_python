@@ -9,11 +9,8 @@ def fibonacci_sequence(n):
 
     # Initialize the Fibonacci sequence with the first two numbers
     sequence = [0, 1]
-
-    # Generate the remaining Fibonacci numbers up to n
-    for i in range(2, n):
+    while len(sequence) < n:
         next_number = sequence[-1] + sequence[-2]
         sequence.append(next_number)
 
     return sequence
-
