@@ -12,5 +12,5 @@ b = 2
 result = add(a, b)
 
 # Print the result in the desired format
-print(f"{a} + {b} = {result}")
+print("{} + {} = {}".format(a, b, result))
 
