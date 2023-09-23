@@ -1,6 +1,10 @@
 #!/usr/bin/python3
-""" an empty class"""
+
+""" an empty class """
+
 class BaseGeometry:
-"""" it is an empty class that why we don't have return """
+
+    """" it is an empty class that why we don't have return """
+    
     pass
 
