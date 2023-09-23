@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-"""Module for the Square class."""
+""" Module for the Square class."""
 
 Rectangle = __import__('7-rectangle').Rectangle
 
 class Square(Rectangle):
 
-    """Square class, inherits from Rectangle."""
+    """ Square class, inherits from Rectangle."""
 
     def __init__(self, size):
     
@@ -25,20 +25,20 @@ class Square(Rectangle):
 
     def area(self):
     
-        """Compute the area of the square."""
+        """ Compute the area of the square."""
         
         return self.__size ** 2
 
     def __str__(self):
         
-        """Return a string representation of the Square."""
+        """ Return a string representation of the Square."""
         
         return "[Square] {}/{}".format(self.__size, self.__size)
 
     @property
     def size(self):
         
-        """Getter for the size attribute."""
+        """ Getter for the size attribute."""
         
         return self.__size
 
