@@ -5,7 +5,10 @@ import csv
 """     Using what you did in the task #0, extend your Python script to export data in the CSV format."""
 
 def get_employee_data(employee_id):
-    # Get employee details
+    
+""" Get employee details """
+
+
     employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
     employee_response = requests.get(employee_url)
     employee_data = employee_response.json()
@@ -18,6 +21,8 @@ def get_employee_data(employee_id):
     return employee_data, todos_data
 
 def export_to_csv(employee_id, employee_name, todos):
+
+""" function to export data to csv """
     filename = f"{employee_id}.csv"
 
     with open(filename, mode='w', newline='') as file:
@@ -30,6 +35,9 @@ def export_to_csv(employee_id, employee_name, todos):
     print(f"Data exported to {filename}")
 
 def main():
+    
+    """ the main function """
+
     if len(sys.argv) != 2 or not sys.argv[1].isdigit():
         print("Usage: python script.py <employee_id>")
         sys.exit(1)
