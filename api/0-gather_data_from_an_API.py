@@ -2,12 +2,12 @@ import requests
 import sys
 
 def get_employee_data(employee_id):
-
+    # Get employee details
     employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
     employee_response = requests.get(employee_url)
     employee_data = employee_response.json()
     
-    
+    # Get employee's TODO list
     todos_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
     todos_response = requests.get(todos_url)
     todos_data = todos_response.json()
@@ -26,18 +26,19 @@ def main():
 
     employee_id = int(sys.argv[1])
 
-
+    # Get employee data
     employee, todos = get_employee_data(employee_id)
 
-    
+    # Extract relevant information
     employee_name = employee.get('name')
     completed_tasks = sum(1 for todo in todos if todo['completed'])
     total_tasks = len(todos)
     task_titles = [todo['title'] for todo in todos if todo['completed']]
 
-    
+    # Display the information
     display_todo_progress(employee_name, completed_tasks, total_tasks, task_titles)
 
 if __name__ == "__main__":
     main()
+
 
