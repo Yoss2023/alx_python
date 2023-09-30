@@ -2,6 +2,8 @@ import requests
 import sys
 import csv
 
+"""     Using what you did in the task #0, extend your Python script to export data in the CSV format."""
+
 def get_employee_data(employee_id):
     # Get employee details
     employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
